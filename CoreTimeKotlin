@@ -1,0 +1,17 @@
+var dateStart = "02/02/2020 10:00:00"
+        var dateStop = "03/02/2020 10:00:00"
+        var format = SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
+        val d1 = format.parse(dateStart)
+
+        val d2 = format.parse(dateStop)
+        val d1mile = d1.time
+        val d2mile = d2.time
+
+        val min = d2.time - d1.time
+        var diffDays: Long = min / (24 * 60 * 60 * 1000)
+        val diffHours: Long = min / (60 * 60 * 1000)
+        val diffMinutes: Long = min / (60 * 1000)
+        val diffSeconds: Long = min / 1000
+
+
+        See.log("d1tgl = $d1, d2tgl= $d2 , timemiled1 : $d1mile, timemiled2 : $d2mile, hasil kurang : $min,  selisih hari : $diffDays, selisih jam : $diffHours , selisih menit : $diffMinutes , selisih seconds : $diffSeconds")
